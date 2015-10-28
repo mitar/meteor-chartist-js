@@ -7,8 +7,13 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
+  api.use('fourseven:scss@3.4.1');
   api.addFiles([
+    'before.js',
     'chartist-js/dist/chartist.js',
-    'chartist-js/dist/chartist.css'
+    'chartist-js/dist/scss/settings/_chartist-settings.scss',
+    'chartist-js/dist/scss/chartist.scss',
+    'after.js'
   ], 'client');
+  api.export('Chartist');
 });
